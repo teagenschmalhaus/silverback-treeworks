@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote | Silverback Treeworks</title>
+  <meta name="description" content="Request a free quote from Silverback Treeworks. ISA Certified Arborists serving Vancouver, North Shore, and the Sea to Sky corridor. Call 604.312.7399.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../">
+
+  <!-- NAV -->
+  <nav class="nav nav--solid" id="nav">
+    <div class="container nav__inner">
+      <a href="../" class="nav__logo">
+        <img src="../assets/images/logo-landscape.png" alt="Silverback Treeworks" class="nav__logo-img">
+      </a>
+      <ul class="nav__links">
+        <li><a href="../about/" class="nav__link">About</a></li>
+        <li class="nav__dropdown">
+          <a href="../services/" class="nav__link">Services ▾</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../services/tree-removal/">Tree Removal</a></li>
+            <li><a href="../services/tree-pruning/">Tree Pruning</a></li>
+            <li><a href="../services/hedge-trimming/">Hedge Trimming</a></li>
+            <li><a href="../services/stump-grinding/">Stump Grinding</a></li>
+            <li><a href="../services/consulting/">Consulting</a></li>
+            <li><a href="../services/plant-healthcare/">Plant Healthcare</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="../areas/" class="nav__link">Areas ▾</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../areas/north-vancouver/">North Vancouver</a></li>
+            <li><a href="../areas/west-vancouver/">West Vancouver</a></li>
+            <li><a href="../areas/vancouver/">Vancouver</a></li>
+            <li><a href="../areas/burnaby/">Burnaby</a></li>
+            <li><a href="../areas/coquitlam/">Coquitlam</a></li>
+            <li><a href="../areas/port-moody/">Port Moody</a></li>
+            <li><a href="../areas/new-westminster/">New Westminster</a></li>
+            <li><a href="../areas/richmond/">Richmond</a></li>
+            <li><a href="../areas/delta/">Delta</a></li>
+            <li><a href="../areas/squamish/">Squamish</a></li>
+            <li><a href="../areas/whistler/">Whistler</a></li>
+            <li><a href="../areas/pemberton/">Pemberton</a></li>
+          </ul>
+        </li>
+        <li><a href="../gallery/" class="nav__link">Gallery</a></li>
+        <li><a href="../testimonials/" class="nav__link">Testimonials</a></li>
+        <li><a href="../resources/" class="nav__link">Resources</a></li>
+      </ul>
+      <a href="../contact/" class="btn btn--accent nav__cta">Get a Free Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="../about/" class="nav__mobile-link">About</a>
+    <details class="nav__mobile-group">
+      <summary>Services</summary>
+      <div class="nav__mobile-sub">
+        <a href="../services/tree-removal/">Tree Removal</a>
+        <a href="../services/tree-pruning/">Tree Pruning</a>
+        <a href="../services/hedge-trimming/">Hedge Trimming</a>
+        <a href="../services/stump-grinding/">Stump Grinding</a>
+        <a href="../services/consulting/">Consulting</a>
+        <a href="../services/plant-healthcare/">Plant Healthcare</a>
+      </div>
+    </details>
+    <details class="nav__mobile-group">
+      <summary>Areas Served</summary>
+      <div class="nav__mobile-sub">
+        <a href="../areas/north-vancouver/">North Vancouver</a>
+        <a href="../areas/west-vancouver/">West Vancouver</a>
+        <a href="../areas/vancouver/">Vancouver</a>
+        <a href="../areas/burnaby/">Burnaby</a>
+        <a href="../areas/coquitlam/">Coquitlam</a>
+        <a href="../areas/port-moody/">Port Moody</a>
+        <a href="../areas/new-westminster/">New Westminster</a>
+        <a href="../areas/richmond/">Richmond</a>
+        <a href="../areas/delta/">Delta</a>
+        <a href="../areas/squamish/">Squamish</a>
+        <a href="../areas/whistler/">Whistler</a>
+        <a href="../areas/pemberton/">Pemberton</a>
+      </div>
+    </details>
+    <a href="../gallery/" class="nav__mobile-link">Gallery</a>
+    <a href="../testimonials/" class="nav__mobile-link">Testimonials</a>
+    <a href="../resources/" class="nav__mobile-link">Resources</a>
+    <a href="../contact/" class="btn btn--accent nav__mobile-cta">Get a Free Quote</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label page-hero__label">Free Estimates</span>
+      <h1 class="page-hero__title">Request a Quote</h1>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            enctype="multipart/form-data"
+            id="quoteForm"
+          >
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
+            <input type="hidden" name="subject" value="New Quote Request — Silverback Treeworks">
+            <input type="hidden" name="from_name" value="Silverback Treeworks Website">
+            <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/thanks/">
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="604-555-0100" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service…</option>
+                  <option>Tree Removal</option>
+                  <option>Tree Pruning</option>
+                  <option>Hedge Trimming</option>
+                  <option>Stump Grinding</option>
+                  <option>Consulting / Arborist Report</option>
+                  <option>Plant Healthcare</option>
+                  <option>Not sure — need assessment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="area">Your City / Area</label>
+                <select id="area" name="area">
+                  <option value="" disabled selected>Select your area…</option>
+                  <optgroup label="Metro Vancouver">
+                    <option>Vancouver</option>
+                    <option>Burnaby</option>
+                    <option>Coquitlam</option>
+                    <option>Port Moody</option>
+                    <option>New Westminster</option>
+                    <option>Richmond</option>
+                    <option>Delta</option>
+                  </optgroup>
+                  <optgroup label="North Shore">
+                    <option>North Vancouver</option>
+                    <option>West Vancouver</option>
+                  </optgroup>
+                  <optgroup label="Sea to Sky">
+                    <option>Squamish</option>
+                    <option>Whistler</option>
+                    <option>Pemberton</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" placeholder="Describe what you need — size of tree, location, any urgency, access concerns, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Attach Photos or Videos (optional)</label>
+              <div class="upload-zone" id="uploadZone">
+                <input
+                  type="file"
+                  name="attachment"
+                  id="fileInput"
+                  accept="image/*,video/*,.pdf"
+                  multiple
+                >
+                <div class="upload-zone__icon">📎</div>
+                <p class="upload-zone__text">
+                  <strong>Click to upload</strong> or drag and drop<br>
+                  Photos, videos, or PDF — helps us give an accurate quote
+                </p>
+                <p class="upload-zone__files" id="fileNames"></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
+              Send Quote Request
+            </button>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="contact-info">
+          <div class="contact-info-block">
+            <p class="contact-info-block__label">Call or Text</p>
+            <p class="contact-info-block__value"><a href="tel:6043127399">604.312.7399</a></p>
+            <p class="contact-info-block__note">Available Mon–Sat, 7am–6pm</p>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-info-block__label">Email</p>
+            <p class="contact-info-block__value"><a href="mailto:info@silverbacktreeworks.com">info@silverbacktreeworks.com</a></p>
+            <p class="contact-info-block__note">We respond within one business day</p>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-info-block__label">Service Areas</p>
+            <p class="contact-info-block__value">Vancouver &amp; Lower Mainland</p>
+            <p class="contact-info-block__note">North Shore · Metro Vancouver · Sea to Sky corridor</p>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-info-block__label">Certifications</p>
+            <div class="cert-badges">
+              <span class="cert-badge">ISA Certified</span>
+              <span class="cert-badge">WorkSafe BC</span>
+              <span class="cert-badge">SAFE Company</span>
+              <span class="cert-badge">Since 2007</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img src="../assets/images/logo.png" alt="Silverback Treeworks" class="footer__logo-img">
+          <p class="footer__tagline">ISA Certified Arborists serving Vancouver, the North Shore, and the Sea to Sky corridor since 2007.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Services</p>
+          <ul class="footer__links">
+            <li><a href="../services/tree-removal/">Tree Removal</a></li>
+            <li><a href="../services/tree-pruning/">Tree Pruning</a></li>
+            <li><a href="../services/hedge-trimming/">Hedge Trimming</a></li>
+            <li><a href="../services/stump-grinding/">Stump Grinding</a></li>
+            <li><a href="../services/consulting/">Consulting</a></li>
+            <li><a href="../services/plant-healthcare/">Plant Healthcare</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Areas Served</p>
+          <ul class="footer__links">
+            <li><a href="../areas/north-vancouver/">North Vancouver</a></li>
+            <li><a href="../areas/west-vancouver/">West Vancouver</a></li>
+            <li><a href="../areas/vancouver/">Vancouver</a></li>
+            <li><a href="../areas/burnaby/">Burnaby</a></li>
+            <li><a href="../areas/squamish/">Squamish</a></li>
+            <li><a href="../areas/whistler/">Whistler</a></li>
+            <li><a href="../areas/">View All &rarr;</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <div class="footer__contact">
+            <p><a href="tel:6043127399">604.312.7399</a></p>
+            <p><a href="mailto:info@silverbacktreeworks.com">info@silverbacktreeworks.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Silverback Treeworks. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (burger && mobileMenu) {
+      burger.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('open');
+        burger.classList.toggle('active', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    }
+
+    // File upload label
+    const fileInput = document.getElementById('fileInput');
+    const fileNames = document.getElementById('fileNames');
+    const uploadZone = document.getElementById('uploadZone');
+
+    fileInput.addEventListener('change', () => {
+      const files = Array.from(fileInput.files);
+      fileNames.textContent = files.length
+        ? files.map(f => f.name).join(', ')
+        : '';
+    });
+
+    uploadZone.addEventListener('dragover', e => {
+      e.preventDefault();
+      uploadZone.classList.add('dragover');
+    });
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+    uploadZone.addEventListener('drop', e => {
+      e.preventDefault();
+      uploadZone.classList.remove('dragover');
+      fileInput.files = e.dataTransfer.files;
+      fileInput.dispatchEvent(new Event('change'));
+    });
+  </script>
+</body>
+</html>

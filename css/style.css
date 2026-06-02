@@ -480,6 +480,142 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 @media (min-width: 600px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* ============================================
+   PAGE HERO (inner pages)
+   ============================================ */
+.page-hero {
+  background: var(--green);
+  padding: calc(var(--nav-h) + 3rem) 0 3rem;
+  color: var(--white);
+}
+.page-hero__label { color: var(--gold); }
+.page-hero__title { color: var(--white); margin-top: 0.5rem; }
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-grid { grid-template-columns: 2fr 1fr; gap: 4rem; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 640px) {
+  .form-row { grid-template-columns: 1fr 1fr; gap: 0 1.25rem; }
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color var(--ease);
+  -webkit-appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+textarea { resize: vertical; min-height: 130px; }
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* File upload */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--ease);
+  position: relative;
+}
+.upload-zone:hover, .upload-zone.dragover {
+  border-color: var(--green);
+  background: var(--off-white);
+}
+.upload-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.upload-zone__icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.upload-zone__text { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+.upload-zone__text strong { color: var(--green); }
+.upload-zone__files { margin-top: 0.75rem; font-size: 0.8rem; color: var(--green); font-weight: 500; }
+
+/* Contact info sidebar */
+.contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+.contact-info-block__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.contact-info-block__value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.contact-info-block__value a { color: var(--green); transition: var(--ease); }
+.contact-info-block__value a:hover { color: var(--gold); }
+.contact-info-block__note { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+.cert-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.cert-badge {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* ============================================
    CTA SECTION
    ============================================ */
 .cta-section { background: var(--off-white); text-align: center; padding: clamp(3rem, 8vw, 6rem) 0; }
