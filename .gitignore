@@ -12,5 +12,5 @@ Ads/
 *.pdf
 *.zip
 
-# Large video/media files — deploy via Netlify CLI, not git
-assets/videos/
+# Large raw video files — keep originals out of repo
+assets/videos/*.mov
