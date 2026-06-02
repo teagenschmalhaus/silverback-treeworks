@@ -608,6 +608,37 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .area-pill:hover { background: var(--green); color: var(--white); border-color: var(--green); }
 
 /* ============================================
+   AREA PAGES — service link grid
+   ============================================ */
+.service-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 640px)  { .service-links { grid-template-columns: repeat(3, 1fr); } }
+
+.service-link-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--green);
+  transition: var(--ease);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.service-link-card:hover {
+  border-color: var(--green);
+  background: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.service-link-card::after { content: '→'; color: var(--gold); font-weight: 400; flex-shrink: 0; }
+
+/* ============================================
    GALLERY PREVIEW (homepage)
    ============================================ */
 .gallery-preview {
