@@ -5,15 +5,15 @@
   --green:       #1e3d2a;
   --green-dark:  #142a1e;
   --green-light: #2a5039;
-  --gold:        #c8a84b;
-  --gold-dark:   #b08d35;
+  --gold:        #e8b820;
+  --gold-dark:   #cc9f10;
   --white:       #ffffff;
   --off-white:   #f8f6f2;
   --text:        #1a1a1a;
   --text-muted:  #666666;
   --border:      #e0ddd8;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-w:    1200px;
@@ -46,8 +46,8 @@ ul    { list-style: none; }
 /* ============================================
    TYPOGRAPHY
    ============================================ */
-h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; font-weight: 700; }
-h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; font-weight: 700; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
