@@ -135,7 +135,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 /* Logo */
 .nav__logo-img {
-  height: 52px;
+  height: 44px;
   width: auto;
   filter: brightness(0) invert(1);
 }
