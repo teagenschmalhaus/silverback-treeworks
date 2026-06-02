@@ -1,21 +1,23 @@
-async function loadComponent(id, url) {
+const ROOT = document.body.dataset.root ?? '';
+
+async function loadComponent(id, file) {
   const el = document.getElementById(id);
   if (!el) return;
   try {
-    const res = await fetch(url);
+    const res = await fetch(`${ROOT}${file}`);
     if (!res.ok) return;
     const html = await res.text();
     el.insertAdjacentHTML('beforebegin', html);
     el.remove();
   } catch (e) {
-    console.warn('Could not load component:', url);
+    console.warn('Could not load component:', file);
   }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([
-    loadComponent('header-placeholder', '/components/header.html'),
-    loadComponent('footer-placeholder', '/components/footer.html'),
+    loadComponent('header-placeholder', 'components/header.html'),
+    loadComponent('footer-placeholder', 'components/footer.html'),
   ]);
   initNav();
 });
