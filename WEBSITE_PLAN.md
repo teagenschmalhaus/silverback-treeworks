@@ -9,7 +9,7 @@ Silverback Treeworks operates across three zones (Sea to Sky, Squamish/Whistler,
 
 - **Plain HTML/CSS/JS** — no build tools, no frameworks. Best fit for a beginner. Open files directly in browser, deploy by pushing to GitHub.
 - **Web3Forms** — handles the quote/contact form submissions, emails them to teagen.schmalhaus@gmail.com. Free tier supports file attachments (photos/videos) and unlimited submissions.
-- **Netlify** — free hosting, auto-deploys from the GitHub repo (`silverback-treeworks`) on every push. Custom domain support included.
+- **GitHub Pages** — free hosting built directly into the GitHub repo (`silverback-treeworks`). Enable in repo Settings → Pages. Custom domain support included via a `CNAME` file.
 - **CSS approach** — custom CSS with CSS variables for the color palette. No heavy framework needed.
 
 ---
@@ -110,7 +110,7 @@ Each folder uses `index.html` so URLs are clean (e.g. `/services/tree-removal/` 
 
 ## Migration Checklist (pre-launch)
 - [ ] Capture all current URLs from silverbacktreeworks.com
-- [ ] Match new URLs to old — add 301 redirects in `_redirects` file (Netlify format) for any that change
+- [ ] Match new URLs to old — build URL structure to match existing site to avoid needing redirects
 - [ ] Migrate meta titles/descriptions from current site
 - [ ] Confirm domain registrar access
 - [ ] Test contact form end-to-end
@@ -128,4 +128,4 @@ Each folder uses `index.html` so URLs are clean (e.g. `/services/tree-removal/` 
 6. Gallery
 7. About + Testimonials
 8. Resources / article migration
-9. Netlify deploy + domain connection
+9. GitHub Pages setup + domain connection (repo Settings → Pages → add `CNAME` file with `silverbacktreeworks.com`)

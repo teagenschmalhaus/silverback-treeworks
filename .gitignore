@@ -3,3 +3,14 @@ node_modules/
 .env
 .env.local
 dist/
+
+# Business documents — not for the website repo
+Silverback/
+Photos & Videos/
+Ads/
+*.docx
+*.pdf
+*.zip
+
+# Large video/media files — deploy via Netlify CLI, not git
+assets/videos/

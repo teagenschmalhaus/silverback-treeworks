@@ -25,7 +25,7 @@ These will be added once a framework/stack is chosen. Common options to consider
 
 ## Development
 
-No build step — open any `index.html` directly in a browser, or use VS Code's Live Server extension for auto-reload. Push to GitHub to trigger an automatic Netlify deploy.
+No build step — open any `index.html` directly in a browser, or use VS Code's Live Server extension for auto-reload. Push to GitHub to trigger an automatic GitHub Pages deploy. Enable Pages in repo Settings → Pages → set source to `main` branch.
 
 ## Website Plan
 
