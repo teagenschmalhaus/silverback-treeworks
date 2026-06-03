@@ -1,0 +1,21 @@
+# Netlify redirects — old silverbacktreeworks.com URLs → new site structure
+
+# Location pages → Area pages
+/locations/north-vancouver/     /areas/north-vancouver/     301
+/locations/west-vancouver/      /areas/west-vancouver/      301
+/locations/vancouver/           /areas/vancouver/           301
+/locations/burnaby/             /areas/burnaby/             301
+/locations/coquitlam/           /areas/coquitlam/           301
+/locations/squamish/            /areas/squamish/            301
+/locations/whistler/            /areas/whistler/            301
+/locations/surrey/              /areas/vancouver/           301
+
+# Quote page → Contact
+/request-a-quote/               /contact/                   301
+
+# About subpages
+/about/us/                      /about/                     301
+/about/careers/                 /about/                     301
+
+# Career page
+/career/arborist/               /about/                     301
