@@ -409,6 +409,22 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* ============================================
+   AREAS OVERVIEW
+   ============================================ */
+.areas-group__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+/* ============================================
    AREA CARDS
    ============================================ */
 .areas-pills {
