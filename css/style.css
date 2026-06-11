@@ -57,9 +57,11 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 0.75rem;
 }
+.section--dark .section-label,
+.page-hero .section-label { color: var(--gold); }
 
 .section-title  { margin-bottom: 1rem; }
 
@@ -397,7 +399,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .service-card__link {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--green);
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -475,7 +477,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   box-shadow: var(--shadow);
 }
 
-.testimonial-card__stars  { color: var(--gold); font-size: 0.95rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.testimonial-card__stars  { color: var(--green); font-size: 0.95rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
 .testimonial-card__text   { font-size: 0.95rem; line-height: 1.8; color: var(--text); margin-bottom: 1.25rem; font-style: italic; }
 .testimonial-card__author { font-weight: 600; font-size: 0.875rem; color: var(--green); }
 .testimonial-card__location { font-size: 0.8rem; color: var(--text-muted); }
@@ -537,7 +539,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 1rem;
 }
 .service-aside__item {
@@ -599,7 +601,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   gap: 1rem;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: var(--gold); flex-shrink: 0; }
+.faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: var(--green); flex-shrink: 0; }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item[open] summary { color: var(--green); }
 .faq-item__answer {
@@ -651,7 +653,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
-.service-link-card::after { content: '→'; color: var(--gold); font-weight: 400; flex-shrink: 0; }
+.service-link-card::after { content: '→'; color: var(--green); font-weight: 400; flex-shrink: 0; }
 
 /* ============================================
    GALLERY PREVIEW (homepage)
@@ -799,7 +801,7 @@ select {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 0.5rem;
 }
 .contact-info-block__value {
@@ -808,7 +810,7 @@ select {
   color: var(--text);
 }
 .contact-info-block__value a { color: var(--green); transition: var(--ease); }
-.contact-info-block__value a:hover { color: var(--gold); }
+.contact-info-block__value a:hover { color: var(--green-dark); }
 .contact-info-block__note { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
 
 .cert-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
@@ -935,11 +937,11 @@ select {
 .article-list { display: flex; flex-direction: column; gap: 2rem; max-width: 780px; margin: 0 auto; }
 .article-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; transition: var(--ease); }
 .article-card:hover { border-color: var(--green); box-shadow: 0 4px 16px rgba(30,61,42,0.08); }
-.article-card__tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.article-card__tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
 .article-card__title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--green); margin-bottom: 0.5rem; }
 .article-card__excerpt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
 .article-card__link { font-size: 0.875rem; font-weight: 600; color: var(--green); }
-.article-card__link:hover { color: var(--gold); }
+.article-card__link:hover { color: var(--green-dark); }
 
 /* ============================================
    TESTIMONIALS PAGE
@@ -957,7 +959,7 @@ select {
   color: var(--green);
   line-height: 1;
 }
-.reviews-summary__stars { font-size: 1.5rem; color: var(--gold); letter-spacing: 0.05em; }
+.reviews-summary__stars { font-size: 1.5rem; color: var(--green); letter-spacing: 0.05em; }
 .reviews-summary__meta  { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
 
 .reviews-grid {
@@ -978,7 +980,7 @@ select {
   flex-direction: column;
   gap: 1rem;
 }
-.review-card__stars { color: var(--gold); font-size: 1rem; letter-spacing: 0.05em; }
+.review-card__stars { color: var(--green); font-size: 1rem; letter-spacing: 0.05em; }
 .review-card__text {
   font-size: 0.925rem;
   line-height: 1.8;
