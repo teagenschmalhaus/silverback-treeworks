@@ -98,8 +98,8 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .btn--primary { background: var(--green); color: var(--white); border-color: var(--green); }
 .btn--primary:hover { background: var(--green-dark); border-color: var(--green-dark); }
 
-.btn--accent { background: var(--gold); color: var(--white); border-color: var(--gold); }
-.btn--accent:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+.btn--accent { background: var(--gold-dark); color: var(--white); border-color: var(--gold-dark); }
+.btn--accent:hover { background: #ccaa00; border-color: #ccaa00; }
 
 .btn--outline { background: transparent; color: var(--green); border-color: var(--green); }
 .btn--outline:hover { background: var(--green); color: var(--white); }
