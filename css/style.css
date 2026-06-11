@@ -451,9 +451,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   color: var(--green);
 }
 .section--dark .area-pill {
-  border-color: var(--gold);
   color: var(--gold);
-  background: rgba(255,222,89,0.07);
 }
 .section--dark .area-pill:hover {
   background: var(--gold);
