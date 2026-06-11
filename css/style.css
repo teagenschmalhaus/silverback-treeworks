@@ -437,18 +437,18 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .area-pill {
   display: inline-block;
   padding: 0.65rem 1.4rem;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid var(--gold);
   border-radius: 100px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--white);
-  background: rgba(255,255,255,0.07);
+  color: var(--gold);
+  background: rgba(255,222,89,0.07);
   transition: var(--ease);
 }
 .area-pill:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--white);
+  color: var(--green);
 }
 
 /* ============================================
