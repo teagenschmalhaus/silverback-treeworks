@@ -932,3 +932,65 @@ select {
 .article-card__excerpt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
 .article-card__link { font-size: 0.875rem; font-weight: 600; color: var(--green); }
 .article-card__link:hover { color: var(--gold); }
+
+/* ============================================
+   TESTIMONIALS PAGE
+   ============================================ */
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+.reviews-summary__score {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+.reviews-summary__stars { font-size: 1.5rem; color: var(--gold); letter-spacing: 0.05em; }
+.reviews-summary__meta  { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 600px)  { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.review-card__stars { color: var(--gold); font-size: 1rem; letter-spacing: 0.05em; }
+.review-card__text {
+  font-size: 0.925rem;
+  line-height: 1.8;
+  color: var(--text);
+  flex: 1;
+  margin: 0;
+  font-style: italic;
+}
+.review-card__author { display: flex; flex-direction: column; gap: 0.2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.review-card__name   { font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.review-card__source { font-size: 0.8rem; color: var(--text-muted); }
+
+.reviews-cta {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+.reviews-cta__text { font-size: 1rem; color: var(--text-muted); margin: 0; }
