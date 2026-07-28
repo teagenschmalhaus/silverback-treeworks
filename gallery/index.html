@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Silverback Treeworks Vancouver</title>
+  <meta name="description" content="See Silverback Treeworks in action — tree removals, precision pruning, and specialized equipment across Vancouver and the Sea to Sky corridor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../">
+
+  <nav class="nav nav--solid" id="nav">
+    <div class="container nav__inner">
+      <a href="../" class="nav__logo"><img src="../assets/images/logo-landscape.png" alt="Silverback Treeworks" class="nav__logo-img"></a>
+      <ul class="nav__links">
+        <li><a href="../about/" class="nav__link">About</a></li>
+        <li class="nav__dropdown"><a href="../services/" class="nav__link">Services ▾</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../services/tree-removal/">Tree Removal</a></li>
+            <li><a href="../services/tree-pruning/">Tree Pruning</a></li>
+            <li><a href="../services/hedge-trimming/">Hedge Trimming</a></li>
+            <li><a href="../services/stump-grinding/">Stump Grinding</a></li>
+            <li><a href="../services/consulting/">Consulting</a></li>
+            <li><a href="../services/plant-healthcare/">Plant Healthcare</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown"><a href="../areas/" class="nav__link">Areas ▾</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="../areas/north-vancouver/">North Vancouver</a></li>
+            <li><a href="../areas/west-vancouver/">West Vancouver</a></li>
+            <li><a href="../areas/vancouver/">Vancouver</a></li>
+            <li><a href="../areas/burnaby/">Burnaby</a></li>
+            <li><a href="../areas/coquitlam/">Coquitlam</a></li>
+            <li><a href="../areas/port-moody/">Port Moody</a></li>
+            <li><a href="../areas/new-westminster/">New Westminster</a></li>
+            <li><a href="../areas/richmond/">Richmond</a></li>
+            <li><a href="../areas/delta/">Delta</a></li>
+            <li><a href="../areas/squamish/">Squamish</a></li>
+            <li><a href="../areas/whistler/">Whistler</a></li>
+            <li><a href="../areas/pemberton/">Pemberton</a></li>
+          </ul>
+        </li>
+        <li><a href="../gallery/" class="nav__link">Gallery</a></li>
+        <li><a href="../testimonials/" class="nav__link">Testimonials</a></li>
+        <li><a href="../article/" class="nav__link">Resources</a></li>
+      </ul>
+      <a href="../contact/" class="btn btn--accent nav__cta">Get a Free Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="../about/" class="nav__mobile-link">About</a>
+    <details class="nav__mobile-group"><summary>Services</summary><div class="nav__mobile-sub">
+      <a href="../services/tree-removal/">Tree Removal</a>
+      <a href="../services/tree-pruning/">Tree Pruning</a>
+      <a href="../services/hedge-trimming/">Hedge Trimming</a>
+      <a href="../services/stump-grinding/">Stump Grinding</a>
+      <a href="../services/consulting/">Consulting</a>
+      <a href="../services/plant-healthcare/">Plant Healthcare</a>
+    </div></details>
+    <details class="nav__mobile-group"><summary>Areas Served</summary><div class="nav__mobile-sub">
+      <a href="../areas/north-vancouver/">North Vancouver</a>
+      <a href="../areas/west-vancouver/">West Vancouver</a>
+      <a href="../areas/vancouver/">Vancouver</a>
+      <a href="../areas/burnaby/">Burnaby</a>
+      <a href="../areas/coquitlam/">Coquitlam</a>
+      <a href="../areas/port-moody/">Port Moody</a>
+      <a href="../areas/new-westminster/">New Westminster</a>
+      <a href="../areas/richmond/">Richmond</a>
+      <a href="../areas/delta/">Delta</a>
+      <a href="../areas/squamish/">Squamish</a>
+      <a href="../areas/whistler/">Whistler</a>
+      <a href="../areas/pemberton/">Pemberton</a>
+    </div></details>
+    <a href="../gallery/" class="nav__mobile-link">Gallery</a>
+    <a href="../testimonials/" class="nav__mobile-link">Testimonials</a>
+    <a href="../article/" class="nav__mobile-link">Resources</a>
+    <a href="../contact/" class="btn btn--accent nav__mobile-cta">Get a Free Quote</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label page-hero__label">Our Work</span>
+      <h1 class="page-hero__title">Gallery</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+        <button class="gallery-filter-btn active" data-filter="all">All</button>
+        <button class="gallery-filter-btn" data-filter="climbing">Climbing &amp; Pruning</button>
+        <button class="gallery-filter-btn" data-filter="removal">Tree Removal</button>
+        <button class="gallery-filter-btn" data-filter="equipment">Equipment &amp; Crew</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-01.jpg" data-caption="Arborist climbing and pruning a flowering magnolia">
+          <img src="../assets/images/gallery/climbing-pruning-01.jpg" alt="Arborist climbing and pruning a flowering magnolia tree" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-02.jpg" data-caption="Making a precision pruning cut">
+          <img src="../assets/images/gallery/climbing-pruning-02.jpg" alt="Arborist making a precision pruning cut in a magnolia tree" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-01.jpg" data-caption="Cut rounds stacked for cleanup">
+          <img src="../assets/images/gallery/tree-removal-01.jpg" alt="Cut rounds from a tree removal stacked for cleanup" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-01.jpg" data-caption="Spider lift with the Vancouver skyline behind">
+          <img src="../assets/images/gallery/equipment-01.jpg" alt="Spider lift extended high above a job site with the Vancouver skyline behind" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-02.jpg" data-caption="Making an undercut before felling">
+          <img src="../assets/images/gallery/tree-removal-02.jpg" alt="Arborist making an undercut with a chainsaw before felling" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-03.jpg" data-caption="Reaching into the canopy">
+          <img src="../assets/images/gallery/climbing-pruning-03.jpg" alt="Arborist reaching into the canopy while pruning" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-03.jpg" data-caption="Feeding branches into the chipper">
+          <img src="../assets/images/gallery/equipment-03.jpg" alt="Crew feeding branches into the wood chipper" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-03.jpg" data-caption="Cutting through a large trunk">
+          <img src="../assets/images/gallery/tree-removal-03.jpg" alt="Chainsaw cutting through a large tree trunk" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-04.jpg" data-caption="Working from rope and harness">
+          <img src="../assets/images/gallery/climbing-pruning-04.jpg" alt="Arborist working from rope and harness high in a tree" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-04.jpg" data-caption="Cutting a large trunk during removal">
+          <img src="../assets/images/gallery/tree-removal-04.jpg" alt="Arborist cutting a large tree trunk during removal" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-04.jpg" data-caption="Feeding brush into the chipper">
+          <img src="../assets/images/gallery/equipment-04.jpg" alt="Crew feeding brush into the wood chipper on site" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-05.jpg" data-caption="Pruning with the Vancouver skyline behind">
+          <img src="../assets/images/gallery/climbing-pruning-05.jpg" alt="Arborist pruning a tree with the Vancouver skyline and ocean in the background" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-05.jpg" data-caption="Chainsaw cutting through wood">
+          <img src="../assets/images/gallery/tree-removal-05.jpg" alt="Chainsaw cutting through wood with sawdust flying" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-02.jpg" data-caption="Spider lift with the city skyline behind">
+          <img src="../assets/images/gallery/equipment-02.jpg" alt="Spider lift crane in use with the city skyline in the background" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-06.jpg" data-caption="Pruning against the skyline">
+          <img src="../assets/images/gallery/climbing-pruning-06.jpg" alt="Arborist silhouetted against the Vancouver skyline while pruning" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-06.jpg" data-caption="Close-up chainsaw cut">
+          <img src="../assets/images/gallery/tree-removal-06.jpg" alt="Close-up of a chainsaw cut during tree removal" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-05.jpg" data-caption="Loading logs and debris">
+          <img src="../assets/images/gallery/equipment-05.jpg" alt="Mini skid steer loading logs and debris" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-07.jpg" data-caption="A large tree brought down">
+          <img src="../assets/images/gallery/tree-removal-07.jpg" alt="Large tree brought down during a removal job" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="climbing" data-full="../assets/images/gallery/climbing-pruning-07.jpg" data-caption="Crew moving equipment on site">
+          <img src="../assets/images/gallery/climbing-pruning-07.jpg" alt="Silverback Treeworks crew member moving equipment on site" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-08.jpg" data-caption="Bucking a felled tree into rounds">
+          <img src="../assets/images/gallery/tree-removal-08.jpg" alt="Arborist bucking a felled tree into rounds" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-06.jpg" data-caption="Bucket truck raised into the canopy">
+          <img src="../assets/images/gallery/equipment-06.jpg" alt="Bucket truck raised into the canopy for tree work" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="removal" data-full="../assets/images/gallery/tree-removal-09.jpg" data-caption="Bucking cut logs after removal">
+          <img src="../assets/images/gallery/tree-removal-09.jpg" alt="Bucking cut logs after a tree removal" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-07.jpg" data-caption="Spider lift positioned among the trees">
+          <img src="../assets/images/gallery/equipment-07.jpg" alt="Spider lift positioned among trees with operator in the basket" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-08.jpg" data-caption="Operator working from the spider lift basket">
+          <img src="../assets/images/gallery/equipment-08.jpg" alt="Operator working from a spider lift basket" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-09.jpg" data-caption="Spider lift crane set up against the Sea to Sky mountains">
+          <img src="../assets/images/gallery/equipment-09.jpg" alt="Spider lift crane set up against the Sea to Sky mountains with crew on site" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-10.jpg" data-caption="Spider lift fully extended against the mountains">
+          <img src="../assets/images/gallery/equipment-10.jpg" alt="Spider lift crane fully extended against the Sea to Sky mountains" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-11.jpg" data-caption="Spider lift reaching high above the crew">
+          <img src="../assets/images/gallery/equipment-11.jpg" alt="Spider lift crane reaching high above the crew with mountains behind" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-12.jpg" data-caption="Close-up of the spider lift equipment">
+          <img src="../assets/images/gallery/equipment-12.jpg" alt="Close-up of the spider lift crane mechanism with mountains behind" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-13.jpg" data-caption="Silverback crew member with the crane on site">
+          <img src="../assets/images/gallery/equipment-13.jpg" alt="Silverback Treeworks crew member with the spider lift crane on site" loading="lazy">
+        </button>
+        <button class="gallery-item" data-category="equipment" data-full="../assets/images/gallery/equipment-14.jpg" data-caption="The Silverback Treeworks crew">
+          <img src="../assets/images/gallery/equipment-14.jpg" alt="The Silverback Treeworks crew posed together with the Sea to Sky mountains behind" loading="lazy">
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <button class="lightbox__next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  </div>
+
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__inner">
+        <div class="trust-item"><span class="trust-item__icon">✓</span><span>ISA Certified Arborists</span></div>
+        <div class="trust-item"><span class="trust-item__icon">✓</span><span>In Business Since 2007</span></div>
+        <div class="trust-item"><span class="trust-item__icon">✓</span><span>WorkSafe BC Certified</span></div>
+        <div class="trust-item"><span class="trust-item__icon">✓</span><span>SAFE Company Certified</span></div>
+        <div class="trust-item"><span class="trust-item__icon">✓</span><span>Free Estimates</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Like What You See?</h2>
+      <p class="cta-section__text">Get a free quote from our ISA Certified Arborists. We respond within one business day.</p>
+      <div class="cta-section__actions">
+        <a href="../contact/" class="btn btn--primary btn--lg">Request a Free Quote</a>
+        <a href="tel:6043127399" class="btn btn--outline btn--lg">Call 604.312.7399</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer__grid">
+    <div><img src="../assets/images/logo.png" alt="Silverback Treeworks" class="footer__logo-img"><p class="footer__tagline">ISA Certified Arborists serving Vancouver, the North Shore, and the Sea to Sky corridor since 2007.</p></div>
+    <div><p class="footer__heading">Services</p><ul class="footer__links"><li><a href="../services/tree-removal/">Tree Removal</a></li><li><a href="../services/tree-pruning/">Tree Pruning</a></li><li><a href="../services/hedge-trimming/">Hedge Trimming</a></li><li><a href="../services/stump-grinding/">Stump Grinding</a></li><li><a href="../services/consulting/">Consulting</a></li><li><a href="../services/plant-healthcare/">Plant Healthcare</a></li></ul></div>
+    <div><p class="footer__heading">Areas Served</p><ul class="footer__links"><li><a href="../areas/north-vancouver/">North Vancouver</a></li><li><a href="../areas/west-vancouver/">West Vancouver</a></li><li><a href="../areas/vancouver/">Vancouver</a></li><li><a href="../areas/burnaby/">Burnaby</a></li><li><a href="../areas/squamish/">Squamish</a></li><li><a href="../areas/whistler/">Whistler</a></li><li><a href="../areas/">View All &rarr;</a></li></ul></div>
+    <div><p class="footer__heading">Contact</p><div class="footer__contact"><p><a href="tel:6043127399">604.312.7399</a></p><p><a href="mailto:info@silverbacktreeworks.com">info@silverbacktreeworks.com</a></p></div></div>
+  </div><div class="footer__bottom"><p>&copy; 2025 Silverback Treeworks. All rights reserved.</p><div class="footer__social"><a href="https://www.facebook.com/silverbacktreeworks/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/silverbacktreeworks/" target="_blank" rel="noopener">Instagram</a></div></div></div></footer>
+
+  <script>const burger=document.getElementById('burger'),mobileMenu=document.getElementById('mobileMenu');if(burger&&mobileMenu){burger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');burger.classList.toggle('active',open);document.body.style.overflow=open?'hidden':'';})};</script>
+
+  <script>
+    (function () {
+      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+      const items = Array.from(document.querySelectorAll('.gallery-item'));
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          items.forEach(item => {
+            const show = filter === 'all' || item.dataset.category === filter;
+            item.style.display = show ? '' : 'none';
+          });
+        });
+      });
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      let visibleItems = [];
+      let currentIndex = 0;
+
+      function openLightbox(item) {
+        visibleItems = items.filter(i => i.style.display !== 'none');
+        currentIndex = visibleItems.indexOf(item);
+        showCurrent();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function showCurrent() {
+        const item = visibleItems[currentIndex];
+        lightboxImg.src = item.dataset.full;
+        lightboxImg.alt = item.dataset.caption || '';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      items.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      document.getElementById('lightboxPrev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        showCurrent();
+      });
+      document.getElementById('lightboxNext').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        showCurrent();
+      });
+      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') document.getElementById('lightboxPrev').click();
+        if (e.key === 'ArrowRight') document.getElementById('lightboxNext').click();
+      });
+    })();
+  </script>
+</body>
+</html>

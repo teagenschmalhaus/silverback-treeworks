@@ -8,6 +8,7 @@ dist/
 Silverback/
 Photos & Videos/
 Ads/
+photos/
 *.docx
 *.pdf
 *.zip
