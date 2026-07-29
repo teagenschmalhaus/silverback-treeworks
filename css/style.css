@@ -456,7 +456,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 /* ============================================
    SERVICES PHOTO GRID
    ============================================ */
-.services-section .section-header { margin-bottom: 1.5rem; }
+.services-section .section-header { margin-bottom: 0.75rem; }
 .services-section .section-intro { margin-bottom: 0; }
 .services-photo-grid {
   display: grid;
