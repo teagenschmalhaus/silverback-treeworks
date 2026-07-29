@@ -1,5 +1,18 @@
 const ROOT = document.body.dataset.root ?? '';
 
+function rewriteRelativeLinks(container) {
+  container.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (/^(https?:|tel:|mailto:|#)/.test(href)) return;
+    a.setAttribute('href', ROOT + href);
+  });
+  container.querySelectorAll('img[src]').forEach(img => {
+    const src = img.getAttribute('src');
+    if (/^(https?:|data:)/.test(src)) return;
+    img.setAttribute('src', ROOT + src);
+  });
+}
+
 async function loadComponent(id, file) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -7,7 +20,12 @@ async function loadComponent(id, file) {
     const res = await fetch(`${ROOT}${file}`);
     if (!res.ok) return;
     const html = await res.text();
-    el.insertAdjacentHTML('beforebegin', html);
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
+    rewriteRelativeLinks(wrapper);
+    while (wrapper.firstChild) {
+      el.parentNode.insertBefore(wrapper.firstChild, el);
+    }
     el.remove();
   } catch (e) {
     console.warn('Could not load component:', file);
@@ -15,10 +33,7 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await Promise.all([
-    loadComponent('header-placeholder', 'components/header.html'),
-    loadComponent('footer-placeholder', 'components/footer.html'),
-  ]);
+  await loadComponent('header-placeholder', 'components/header.html');
   initNav();
 });
 

@@ -25,7 +25,7 @@ These will be added once a framework/stack is chosen. Common options to consider
 
 ## Development
 
-No build step — open any `index.html` directly in a browser, or use VS Code's Live Server extension for auto-reload. Push to GitHub to trigger an automatic GitHub Pages deploy. Enable Pages in repo Settings → Pages → set source to `main` branch.
+No build step, but the header nav is shared across pages via `components/header.html` + `js/components.js`, which fetches and injects it at runtime — browsers block that `fetch()` call on pages opened directly via `file://`, so **don't just double-click `index.html`**. Preview through a local server instead: VS Code's Live Server extension, or `python3 -m http.server` from the project root. Push to GitHub to trigger an automatic GitHub Pages deploy. Enable Pages in repo Settings → Pages → set source to `main` branch.
 
 ## Website Plan
 
