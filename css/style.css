@@ -418,15 +418,16 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 /* ============================================
    DIFFERENTIATORS
    ============================================ */
+.diff-section .section-header { margin-bottom: 1.5rem; }
 .diff-row {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 .diff-row__text {
   background: var(--green-dark);
   color: var(--white);
-  padding: 3rem var(--pad);
+  padding: 2rem var(--pad);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,11 +435,12 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 }
 .diff-row__title { font-family: var(--font-heading); font-size: 1.4rem; color: var(--white); margin-bottom: 0.85rem; }
 .diff-row__desc { color: rgba(255,255,255,0.78); line-height: 1.8; font-size: 0.95rem; }
-.diff-row__media { position: relative; min-height: 260px; overflow: hidden; }
+.diff-row__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
 .diff-row__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 @media (min-width: 900px) {
-  .diff-row { display: flex; min-height: 380px; }
+  .diff-row { display: flex; }
+  .diff-row__media { aspect-ratio: 16 / 9; }
   .diff-row__text, .diff-row__media { flex: 1 1 50%; }
   .diff-row__text {
     padding: 0 clamp(2.5rem, 5vw, 4.5rem);
