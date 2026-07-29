@@ -35,7 +35,14 @@
       <li><a href="gallery/" class="nav__link">Gallery</a></li>
       <li><a href="about/" class="nav__link">About</a></li>
       <li><a href="testimonials/" class="nav__link">Testimonials</a></li>
-      <li><a href="article/" class="nav__link">Resources</a></li>
+      <li class="nav__dropdown">
+        <a href="article/" class="nav__link">Resources ▾</a>
+        <ul class="nav__dropdown-menu">
+          <li><a href="article/">Blog</a></li>
+          <li><a href="community/">Community</a></li>
+          <li><a href="careers/">Careers</a></li>
+        </ul>
+      </li>
     </ul>
     <a href="contact/" class="btn btn--accent nav__cta">Get a Free Quote</a>
     <button class="nav__burger" id="burger" aria-label="Toggle menu">
@@ -76,6 +83,13 @@
   <a href="gallery/" class="nav__mobile-link">Gallery</a>
   <a href="about/" class="nav__mobile-link">About</a>
   <a href="testimonials/" class="nav__mobile-link">Testimonials</a>
-  <a href="article/" class="nav__mobile-link">Resources</a>
+  <details class="nav__mobile-group">
+    <summary>Resources</summary>
+    <div class="nav__mobile-sub">
+      <a href="article/">Blog</a>
+      <a href="community/">Community</a>
+      <a href="careers/">Careers</a>
+    </div>
+  </details>
   <a href="contact/" class="btn btn--accent nav__mobile-cta">Get a Free Quote</a>
 </div>

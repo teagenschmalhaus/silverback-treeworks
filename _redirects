@@ -15,7 +15,7 @@
 
 # About subpages
 /about/us/                      /about/                     301
-/about/careers/                 /about/                     301
+/about/careers/                 /careers/                   301
 
 # Career page
-/career/arborist/               /about/                     301
+/career/arborist/               /careers/                   301
