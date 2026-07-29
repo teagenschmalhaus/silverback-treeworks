@@ -27,7 +27,7 @@
         <div>
           <p class="service-intro__lead">Silverback Treeworks is growing, and we're always interested in hearing from motivated, safety-minded people who want to build a career in arboriculture — not just work a job.</p>
           <p class="service-intro__lead">Whether you're an experienced climber, a certified arborist, or new to the trade and eager to train, we'd like to hear from you. Send us a resume and a bit about yourself, and we'll reach out when a role fits.</p>
-          <a href="mailto:info@silverbacktreeworks.com?subject=Careers%20Inquiry" class="btn btn--accent btn--lg" style="margin-top:0.5rem;">Email Your Resume</a>
+          <a href="#apply" class="btn btn--accent btn--lg" style="margin-top:0.5rem;">Apply Now</a>
         </div>
         <div class="service-aside">
           <p class="service-aside__title">Working at Silverback</p>
@@ -77,12 +77,98 @@
     </div>
   </section>
 
+  <!-- APPLICATION FORM -->
+  <section class="section" id="apply">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-label">Apply Now</span>
+        <h2 class="section-title">Tell Us About Yourself</h2>
+        <p class="section-intro" style="margin-left:auto;margin-right:auto;">Fill out the form below and attach your resume — we review every application and respond within one business day.</p>
+      </div>
+
+      <div style="max-width:640px;margin:0 auto;">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          enctype="multipart/form-data"
+          id="applicationForm"
+        >
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
+          <input type="hidden" name="subject" value="New Job Application — Silverback Treeworks">
+          <input type="hidden" name="from_name" value="Silverback Treeworks Careers">
+          <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/applied/">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appName">Full Name *</label>
+              <input type="text" id="appName" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="appPhone">Phone Number *</label>
+              <input type="tel" id="appPhone" name="phone" placeholder="604-555-0100" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="appEmail">Email Address *</label>
+            <input type="email" id="appEmail" name="email" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appPosition">Position of Interest</label>
+            <select id="appPosition" name="position">
+              <option value="" disabled selected>Select a position…</option>
+              <option>Ground Crew / Labourer</option>
+              <option>Climbing Arborist</option>
+              <option>Certified Arborist</option>
+              <option>Equipment Operator</option>
+              <option>Not sure — open to opportunities</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appMessage">Tell us about your experience</label>
+            <textarea id="appMessage" name="message" placeholder="Certifications, years of experience, availability, anything else we should know."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Resume / CV</label>
+            <div class="upload-zone" id="resumeZone">
+              <input
+                type="file"
+                name="resume"
+                id="resumeInput"
+                accept=".pdf,.doc,.docx"
+              >
+              <div class="upload-zone__icon">📄</div>
+              <p class="upload-zone__text">
+                <strong>Click to upload</strong> or drag and drop<br>
+                PDF or Word document
+              </p>
+              <p class="upload-zone__files" id="resumeNames"></p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
+            Submit Application
+          </button>
+
+          <p style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:1rem;">
+            Prefer email? Send your resume to <a href="mailto:info@silverbacktreeworks.com?subject=Careers%20Inquiry" style="color:var(--green);font-weight:600;">info@silverbacktreeworks.com</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container">
       <h2 class="cta-section__title">Ready to Join the Crew?</h2>
-      <p class="cta-section__text">Send us your resume and tell us a bit about your experience — we'll be in touch when a role is a good fit.</p>
+      <p class="cta-section__text">Have questions before you apply? Give us a call — we're happy to talk through what the role looks like.</p>
       <div class="cta-section__actions">
-        <a href="mailto:info@silverbacktreeworks.com?subject=Careers%20Inquiry" class="btn btn--primary btn--lg">Email Your Resume</a>
+        <a href="#apply" class="btn btn--primary btn--lg">Apply Now</a>
         <a href="tel:6043127399" class="btn btn--outline btn--lg">Call 604.312.7399</a>
       </div>
     </div>
@@ -96,5 +182,29 @@
   </div><div class="footer__bottom"><p>&copy; 2026 Silverback Treeworks. All rights reserved.</p><div class="footer__social"><a href="https://www.facebook.com/silverbacktreeworks/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/silverbacktreeworks/" target="_blank" rel="noopener">Instagram</a></div></div></div></footer>
 
   <script src="../js/components.js"></script>
+  <script>
+    const resumeInput = document.getElementById('resumeInput');
+    const resumeNames = document.getElementById('resumeNames');
+    const resumeZone = document.getElementById('resumeZone');
+
+    resumeInput.addEventListener('change', () => {
+      const files = Array.from(resumeInput.files);
+      resumeNames.textContent = files.length
+        ? files.map(f => f.name).join(', ')
+        : '';
+    });
+
+    resumeZone.addEventListener('dragover', e => {
+      e.preventDefault();
+      resumeZone.classList.add('dragover');
+    });
+    resumeZone.addEventListener('dragleave', () => resumeZone.classList.remove('dragover'));
+    resumeZone.addEventListener('drop', e => {
+      e.preventDefault();
+      resumeZone.classList.remove('dragover');
+      resumeInput.files = e.dataTransfer.files;
+      resumeInput.dispatchEvent(new Event('change'));
+    });
+  </script>
 </body>
 </html>
