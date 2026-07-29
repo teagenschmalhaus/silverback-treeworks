@@ -124,6 +124,7 @@
               <option>Climbing Arborist</option>
               <option>Certified Arborist</option>
               <option>Equipment Operator</option>
+              <option>Administrator</option>
               <option>Not sure — open to opportunities</option>
             </select>
           </div>
@@ -148,6 +149,24 @@
                 PDF or Word document
               </p>
               <p class="upload-zone__files" id="resumeNames"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Cover Letter <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+            <div class="upload-zone" id="coverLetterZone">
+              <input
+                type="file"
+                name="cover_letter"
+                id="coverLetterInput"
+                accept=".pdf,.doc,.docx"
+              >
+              <div class="upload-zone__icon">📄</div>
+              <p class="upload-zone__text">
+                <strong>Click to upload</strong> or drag and drop<br>
+                PDF or Word document
+              </p>
+              <p class="upload-zone__files" id="coverLetterNames"></p>
             </div>
           </div>
 
@@ -183,28 +202,33 @@
 
   <script src="../js/components.js"></script>
   <script>
-    const resumeInput = document.getElementById('resumeInput');
-    const resumeNames = document.getElementById('resumeNames');
-    const resumeZone = document.getElementById('resumeZone');
+    function wireUploadZone(zoneId, inputId, namesId) {
+      const zone = document.getElementById(zoneId);
+      const input = document.getElementById(inputId);
+      const names = document.getElementById(namesId);
 
-    resumeInput.addEventListener('change', () => {
-      const files = Array.from(resumeInput.files);
-      resumeNames.textContent = files.length
-        ? files.map(f => f.name).join(', ')
-        : '';
-    });
+      input.addEventListener('change', () => {
+        const files = Array.from(input.files);
+        names.textContent = files.length
+          ? files.map(f => f.name).join(', ')
+          : '';
+      });
 
-    resumeZone.addEventListener('dragover', e => {
-      e.preventDefault();
-      resumeZone.classList.add('dragover');
-    });
-    resumeZone.addEventListener('dragleave', () => resumeZone.classList.remove('dragover'));
-    resumeZone.addEventListener('drop', e => {
-      e.preventDefault();
-      resumeZone.classList.remove('dragover');
-      resumeInput.files = e.dataTransfer.files;
-      resumeInput.dispatchEvent(new Event('change'));
-    });
+      zone.addEventListener('dragover', e => {
+        e.preventDefault();
+        zone.classList.add('dragover');
+      });
+      zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+      zone.addEventListener('drop', e => {
+        e.preventDefault();
+        zone.classList.remove('dragover');
+        input.files = e.dataTransfer.files;
+        input.dispatchEvent(new Event('change'));
+      });
+    }
+
+    wireUploadZone('resumeZone', 'resumeInput', 'resumeNames');
+    wireUploadZone('coverLetterZone', 'coverLetterInput', 'coverLetterNames');
   </script>
 </body>
 </html>
