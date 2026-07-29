@@ -168,6 +168,14 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 /* Dropdowns */
 .nav__dropdown { position: relative; }
+.nav__dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+}
 
 .nav__dropdown-menu {
   position: absolute;
