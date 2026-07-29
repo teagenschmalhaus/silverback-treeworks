@@ -418,7 +418,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 /* ============================================
    DIFFERENTIATORS
    ============================================ */
-.diff-section .section-header { margin-bottom: 1.5rem; }
+.diff-section .section-header { margin-bottom: clamp(3rem, 8vw, 6rem); }
 .diff-row {
   display: grid;
   grid-template-columns: 1fr;
