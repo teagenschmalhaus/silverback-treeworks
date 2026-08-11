@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Free Quote | Silverback Treeworks</title>
-  <meta name="description" content="Request a free quote from Silverback Treeworks. ISA Certified Arborists serving Vancouver, North Shore, and the Sea to Sky corridor. Call 604.312.7399.">
+  <title>Send a Video Quote | Silverback Treeworks</title>
+  <meta name="description" content="Skip the wait — send a quick video of your tree or work area and get a fast quote from Silverback Treeworks' ISA Certified Arborists.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body data-root="../">
+<body data-root="../../">
 
   <!-- NAV -->
   <div id="header-placeholder"></div>
@@ -18,18 +18,18 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container">
-      <span class="section-label page-hero__label">Free Estimates</span>
-      <h1 class="page-hero__title">Request a Quote</h1>
+      <span class="section-label page-hero__label">Fastest Option</span>
+      <h1 class="page-hero__title">Send a Video Quote</h1>
     </div>
   </div>
 
-  <!-- CONTACT SECTION -->
+  <!-- VIDEO QUOTE SECTION -->
   <section class="section">
     <div class="container">
 
       <div class="form-tip">
-        <span class="form-tip__icon">📸</span>
-        <span>For the fastest and most accurate quote, please include clear photos or a short video of the trees or work area. Prefer to just send a video? <a href="../request-a-quote/video/">Try our Video Quote →</a></span>
+        <span class="form-tip__icon">📹</span>
+        <span>Walk around the tree or work area with your phone camera and show us what needs to be done — it's the fastest way to get an accurate proposal. Prefer to fill out a form instead? <a href="../../contact/">Try our Traditional Quote →</a></span>
       </div>
 
       <div class="contact-grid">
@@ -40,11 +40,11 @@
             action="https://api.web3forms.com/submit"
             method="POST"
             enctype="multipart/form-data"
-            id="quoteForm"
+            id="videoQuoteForm"
           >
             <!-- Web3Forms config -->
             <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
-            <input type="hidden" name="subject" value="New Quote Request — Silverback Treeworks">
+            <input type="hidden" name="subject" value="New Video Quote Request — Silverback Treeworks">
             <input type="hidden" name="from_name" value="Silverback Treeworks Website">
             <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/thanks/">
             <input type="checkbox" name="botcheck" style="display:none">
@@ -65,78 +65,73 @@
               <input type="email" id="email" name="email" placeholder="jane@example.com" required>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="service">Service Needed</label>
-                <select id="service" name="service">
-                  <option value="" disabled selected>Select a service…</option>
-                  <option>Tree Removal</option>
-                  <option>Tree Pruning</option>
-                  <option>Hedge Trimming</option>
-                  <option>Stump Grinding</option>
-                  <option>Consulting / Arborist Report</option>
-                  <option>Plant Healthcare</option>
-                  <option>Not sure — need assessment</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="area">Your City / Area</label>
-                <select id="area" name="area">
-                  <option value="" disabled selected>Select your area…</option>
-                  <optgroup label="Metro Vancouver">
-                    <option>Vancouver</option>
-                    <option>Burnaby</option>
-                    <option>Coquitlam</option>
-                    <option>Port Moody</option>
-                    <option>New Westminster</option>
-                    <option>Richmond</option>
-                    <option>Delta</option>
-                  </optgroup>
-                  <optgroup label="North Shore">
-                    <option>North Vancouver</option>
-                    <option>West Vancouver</option>
-                  </optgroup>
-                  <optgroup label="Sea to Sky">
-                    <option>Squamish</option>
-                    <option>Whistler</option>
-                    <option>Pemberton</option>
-                  </optgroup>
-                </select>
-              </div>
+            <div class="form-group">
+              <label for="area">Your City / Area</label>
+              <select id="area" name="area">
+                <option value="" disabled selected>Select your area…</option>
+                <optgroup label="Metro Vancouver">
+                  <option>Vancouver</option>
+                  <option>Burnaby</option>
+                  <option>Coquitlam</option>
+                  <option>Port Moody</option>
+                  <option>New Westminster</option>
+                  <option>Richmond</option>
+                  <option>Delta</option>
+                </optgroup>
+                <optgroup label="North Shore">
+                  <option>North Vancouver</option>
+                  <option>West Vancouver</option>
+                </optgroup>
+                <optgroup label="Sea to Sky">
+                  <option>Squamish</option>
+                  <option>Whistler</option>
+                  <option>Pemberton</option>
+                </optgroup>
+              </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Tell us about your project</label>
-              <textarea id="message" name="message" placeholder="Describe what you need — size of tree, location, any urgency, access concerns, etc."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label>Attach Photos or Videos (optional)</label>
+              <label>Your Video *</label>
               <div class="upload-zone" id="uploadZone">
                 <input
                   type="file"
                   name="attachment"
                   id="fileInput"
-                  accept="image/*,video/*,.pdf"
-                  multiple
+                  accept="video/*"
+                  required
                 >
-                <div class="upload-zone__icon">📎</div>
+                <div class="upload-zone__icon">📹</div>
                 <p class="upload-zone__text">
-                  <strong>Click to upload</strong> or drag and drop<br>
-                  Photos, videos, or PDF — helps us give an accurate quote
+                  <strong>Click to upload</strong> or drag and drop your video<br>
+                  Record on your phone, then upload it here
                 </p>
                 <p class="upload-zone__files" id="fileNames"></p>
               </div>
             </div>
 
+            <div class="form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="Access concerns, timeline, or details the video doesn't cover"></textarea>
+            </div>
+
             <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
-              Send Quote Request
+              Send My Video
             </button>
           </form>
         </div>
 
         <!-- SIDEBAR -->
         <div class="contact-info">
+          <div class="contact-info-block">
+            <p class="contact-info-block__label">Recording Tips</p>
+            <ul class="tips-list">
+              <li>Walk slowly around the tree or work area</li>
+              <li>Show the base, trunk, and canopy</li>
+              <li>Point out access obstacles — fences, wires, slopes, tight gates</li>
+              <li>Mention what you'd like done</li>
+              <li>Keep it under 2–3 minutes</li>
+            </ul>
+          </div>
           <div class="contact-info-block">
             <p class="contact-info-block__label">Call or Text</p>
             <p class="contact-info-block__value"><a href="tel:6043127399">604.312.7399</a></p>
@@ -146,11 +141,6 @@
             <p class="contact-info-block__label">Email</p>
             <p class="contact-info-block__value"><a href="mailto:info@silverbacktreeworks.com">info@silverbacktreeworks.com</a></p>
             <p class="contact-info-block__note">We respond within one business day</p>
-          </div>
-          <div class="contact-info-block">
-            <p class="contact-info-block__label">Service Areas</p>
-            <p class="contact-info-block__value">Vancouver &amp; Lower Mainland</p>
-            <p class="contact-info-block__note">North Shore · Metro Vancouver · Sea to Sky corridor</p>
           </div>
           <div class="contact-info-block">
             <p class="contact-info-block__label">Certifications</p>
@@ -172,30 +162,30 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <img src="../assets/images/logo.png" alt="Silverback Treeworks" class="footer__logo-img">
+          <img src="../../assets/images/logo.png" alt="Silverback Treeworks" class="footer__logo-img">
           <p class="footer__tagline">ISA Certified Arborists serving Vancouver, the North Shore, and the Sea to Sky corridor since 2007.</p>
         </div>
         <div>
           <p class="footer__heading">Services</p>
           <ul class="footer__links">
-            <li><a href="../services/tree-removal/">Tree Removal</a></li>
-            <li><a href="../services/tree-pruning/">Tree Pruning</a></li>
-            <li><a href="../services/hedge-trimming/">Hedge Trimming</a></li>
-            <li><a href="../services/stump-grinding/">Stump Grinding</a></li>
-            <li><a href="../services/consulting/">Consulting</a></li>
-            <li><a href="../services/plant-healthcare/">Plant Healthcare</a></li>
+            <li><a href="../../services/tree-removal/">Tree Removal</a></li>
+            <li><a href="../../services/tree-pruning/">Tree Pruning</a></li>
+            <li><a href="../../services/hedge-trimming/">Hedge Trimming</a></li>
+            <li><a href="../../services/stump-grinding/">Stump Grinding</a></li>
+            <li><a href="../../services/consulting/">Consulting</a></li>
+            <li><a href="../../services/plant-healthcare/">Plant Healthcare</a></li>
           </ul>
         </div>
         <div>
           <p class="footer__heading">Areas Served</p>
           <ul class="footer__links">
-            <li><a href="../areas/north-vancouver/">North Vancouver</a></li>
-            <li><a href="../areas/west-vancouver/">West Vancouver</a></li>
-            <li><a href="../areas/vancouver/">Vancouver</a></li>
-            <li><a href="../areas/burnaby/">Burnaby</a></li>
-            <li><a href="../areas/squamish/">Squamish</a></li>
-            <li><a href="../areas/whistler/">Whistler</a></li>
-            <li><a href="../areas/">View All &rarr;</a></li>
+            <li><a href="../../areas/north-vancouver/">North Vancouver</a></li>
+            <li><a href="../../areas/west-vancouver/">West Vancouver</a></li>
+            <li><a href="../../areas/vancouver/">Vancouver</a></li>
+            <li><a href="../../areas/burnaby/">Burnaby</a></li>
+            <li><a href="../../areas/squamish/">Squamish</a></li>
+            <li><a href="../../areas/whistler/">Whistler</a></li>
+            <li><a href="../../areas/">View All &rarr;</a></li>
           </ul>
         </div>
         <div>
@@ -211,13 +201,12 @@
         <div class="footer__social">
           <a href="https://www.facebook.com/silverbacktreeworks/" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/silverbacktreeworks/" target="_blank" rel="noopener">Instagram</a>
-          
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="../js/components.js"></script>
+  <script src="../../js/components.js"></script>
   <script>
     // File upload label
     const fileInput = document.getElementById('fileInput');
