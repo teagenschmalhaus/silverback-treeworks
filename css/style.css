@@ -316,6 +316,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
    HERO
    ============================================ */
 .hero {
+  position: relative;
   margin-top: var(--nav-h);
   color: var(--white);
 }
@@ -323,17 +324,27 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__video-wrap {
   position: relative;
   width: 100%;
-  height: 50vh;
-  min-height: 280px;
-  max-height: 620px;
+  height: 85vh;
+  min-height: 480px;
+  max-height: 820px;
   overflow: hidden;
   background: var(--green-dark);
+}
+.hero__video-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10,20,14,0.88) 0%, rgba(10,20,14,0.45) 42%, rgba(10,20,14,0.05) 68%);
 }
 .hero__video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .hero__text {
-  background: var(--green-dark);
-  padding: 3rem var(--pad) 3.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 2.5rem var(--pad) 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -365,8 +376,8 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__phone a:hover { text-decoration: underline; }
 
 @media (min-width: 900px) {
-  .hero__video-wrap { height: 70vh; max-height: 720px; }
-  .hero__text { padding: 3.5rem var(--pad) 4rem; }
+  .hero__video-wrap { height: 90vh; max-height: 900px; }
+  .hero__text { padding: 3.5rem var(--pad) 4.5rem; }
   .hero__values { font-size: 0.85rem; letter-spacing: 0.06em; gap: 0.6rem; }
 }
 
