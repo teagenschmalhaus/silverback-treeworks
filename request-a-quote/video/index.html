@@ -15,109 +15,185 @@
   <!-- NAV -->
   <div id="header-placeholder"></div>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="container">
-      <span class="section-label page-hero__label">Fastest Option</span>
-      <h1 class="page-hero__title">Send a Video Quote</h1>
+  <!-- VIDEO HERO -->
+  <div class="video-hero" style="background-image: url('../../assets/images/gallery/climbing-pruning-02.jpg');">
+    <div class="container video-hero__inner">
+      <span class="section-label send-video-panel__label">Fastest Option</span>
+      <h1 class="video-hero__title">Send a Video, Get a Quote</h1>
+      <p class="video-hero__subtitle">Skip the wait — show us the tree or work area from your phone and get a fast, accurate estimate from an ISA Certified Arborist.</p>
     </div>
   </div>
 
-  <!-- VIDEO QUOTE SECTION -->
   <section class="section">
     <div class="container">
 
-      <div class="form-tip">
-        <span class="form-tip__icon">📹</span>
-        <span>Walk around the tree or work area with your phone camera and show us what needs to be done — it's the fastest way to get an accurate proposal. Prefer to fill out a form instead? <a href="../../contact/">Try our Traditional Quote →</a></span>
-      </div>
-
       <div class="contact-grid">
 
-        <!-- FORM -->
+        <!-- MAIN COLUMN -->
         <div>
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            enctype="multipart/form-data"
-            id="videoQuoteForm"
-          >
-            <!-- Web3Forms config -->
-            <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
-            <input type="hidden" name="subject" value="New Video Quote Request — Silverback Treeworks">
-            <input type="hidden" name="from_name" value="Silverback Treeworks Website">
-            <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/thanks/">
-            <input type="checkbox" name="botcheck" style="display:none">
+
+          <!-- PRIMARY CTA: TEXT YOUR VIDEO -->
+          <form class="send-video-panel" id="textLeadForm">
+            <span class="section-label send-video-panel__label">The Fastest Way</span>
+            <h2 class="send-video-panel__title">Send Us Your Video</h2>
+
+            <div class="send-video-panel__layout">
+            <div class="send-video-panel__main">
 
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                <label for="textName">Full Name *</label>
+                <input type="text" id="textName" name="name" placeholder="Jane Smith" required>
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="604-555-0100" required>
+                <label for="textPhone">Phone Number *</label>
+                <input type="tel" id="textPhone" name="phone" placeholder="604-555-0100" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              <label for="textEmail">Email Address *</label>
+              <input type="email" id="textEmail" name="email" placeholder="jane@example.com" required>
             </div>
 
-            <div class="form-group">
-              <label for="area">Your City / Area</label>
-              <select id="area" name="area">
-                <option value="" disabled selected>Select your area…</option>
-                <optgroup label="Metro Vancouver">
-                  <option>Vancouver</option>
-                  <option>Burnaby</option>
-                  <option>Coquitlam</option>
-                  <option>Port Moody</option>
-                  <option>New Westminster</option>
-                  <option>Richmond</option>
-                  <option>Delta</option>
-                </optgroup>
-                <optgroup label="North Shore">
-                  <option>North Vancouver</option>
-                  <option>West Vancouver</option>
-                </optgroup>
-                <optgroup label="Sea to Sky">
-                  <option>Squamish</option>
-                  <option>Whistler</option>
-                  <option>Pemberton</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>Your Video *</label>
-              <div class="upload-zone" id="uploadZone">
-                <input
-                  type="file"
-                  name="attachment"
-                  id="fileInput"
-                  accept="video/*"
-                  required
-                >
-                <div class="upload-zone__icon">📹</div>
-                <p class="upload-zone__text">
-                  <strong>Click to upload</strong> or drag and drop your video<br>
-                  Record on your phone, then upload it here
-                </p>
-                <p class="upload-zone__files" id="fileNames"></p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="textService">Service Needed</label>
+                <select id="textService" name="service">
+                  <option value="" disabled selected>Select a service…</option>
+                  <option>Tree Removal</option>
+                  <option>Tree Pruning</option>
+                  <option>Hedge Trimming</option>
+                  <option>Stump Grinding</option>
+                  <option>Consulting / Arborist Report</option>
+                  <option>Plant Healthcare</option>
+                  <option>Not sure — need assessment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="textAddress">Property Address</label>
+                <input type="text" id="textAddress" name="address" placeholder="123 Main St, North Vancouver">
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="message">Anything else we should know?</label>
-              <textarea id="message" name="message" placeholder="Access concerns, timeline, or details the video doesn't cover"></textarea>
+            <div class="send-video-panel__steps">
+              <div class="send-video-panel__step">
+                <span class="send-video-panel__step-num">1</span>
+                <span>Fill in your details above</span>
+              </div>
+              <div class="send-video-panel__step">
+                <span class="send-video-panel__step-num">2</span>
+                <span>Walk around the tree or work area with your phone camera</span>
+              </div>
+              <div class="send-video-panel__step">
+                <span class="send-video-panel__step-num">3</span>
+                <span>Tap below — your details go with it, so we'll know exactly who's texting</span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg" id="textVideoBtn">Send Us Your Video →</button>
+            <p class="send-video-panel__note">Standard messaging rates from your carrier may apply.</p>
+
             </div>
 
-            <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
-              Send My Video
-            </button>
+            <div class="phone-mockup">
+              <img src="../../assets/images/gallery/climbing-pruning-05.jpg" alt="Phone camera recording a tree canopy for a video quote">
+              <span class="phone-mockup__notch"></span>
+              <span class="phone-mockup__rec"></span>
+            </div>
+            </div>
           </form>
+
+          <!-- DESKTOP HANDOFF -->
+          <div class="desktop-handoff" id="desktopHandoff" hidden>
+            <h3 class="desktop-handoff__title">On a Computer?</h3>
+            <p class="desktop-handoff__text">You'll need your phone anyway — scan this to open this page there and text your video straight from the camera roll.</p>
+            <div class="desktop-handoff__qr" id="qrcode"></div>
+            <a href="#" class="desktop-handoff__reveal" id="revealUploadForm">I already have the video saved on this computer →</a>
+          </div>
+
+          <!-- TRADITIONAL UPLOAD FORM -->
+          <div id="uploadFormWrap">
+            <span class="section-label upload-form-wrap__label">Or Upload It Here Instead</span>
+
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              enctype="multipart/form-data"
+              id="videoQuoteForm"
+            >
+              <!-- Web3Forms config -->
+              <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
+              <input type="hidden" name="subject" value="New Video Quote Request — Silverback Treeworks">
+              <input type="hidden" name="from_name" value="Silverback Treeworks Website">
+              <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/thanks/">
+              <input type="checkbox" name="botcheck" style="display:none">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="604-555-0100" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">Service Needed</label>
+                  <select id="service" name="service">
+                    <option value="" disabled selected>Select a service…</option>
+                    <option>Tree Removal</option>
+                    <option>Tree Pruning</option>
+                    <option>Hedge Trimming</option>
+                    <option>Stump Grinding</option>
+                    <option>Consulting / Arborist Report</option>
+                    <option>Plant Healthcare</option>
+                    <option>Not sure — need assessment</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="address">Property Address</label>
+                  <input type="text" id="address" name="address" placeholder="123 Main St, North Vancouver">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Your Video *</label>
+                <div class="upload-zone" id="uploadZone">
+                  <input
+                    type="file"
+                    name="attachment"
+                    id="fileInput"
+                    accept="video/*"
+                    required
+                  >
+                  <div class="upload-zone__icon">📹</div>
+                  <p class="upload-zone__text">
+                    <strong>Click to upload</strong> or drag and drop your video<br>
+                    Record on your phone, then upload it here
+                  </p>
+                  <p class="upload-zone__files" id="fileNames"></p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Anything else we should know?</label>
+                <textarea id="message" name="message" placeholder="Access concerns, timeline, or details the video doesn't cover"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
+                Send My Video
+              </button>
+            </form>
+          </div>
+
         </div>
 
         <!-- SIDEBAR -->
@@ -206,8 +282,44 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="../../js/components.js"></script>
   <script>
+    // Text-your-video lead form: email the lead immediately, then hand off
+    // to the customer's messaging app with their details pre-filled.
+    const textLeadForm = document.getElementById('textLeadForm');
+
+    textLeadForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const name = document.getElementById('textName').value.trim();
+      const phone = document.getElementById('textPhone').value.trim();
+      const email = document.getElementById('textEmail').value.trim();
+      const service = document.getElementById('textService').value;
+      const address = document.getElementById('textAddress').value.trim();
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: 'da4a7bcd-d62e-4182-a059-53c7499c898d',
+          subject: 'New Video Quote Lead — Text Flow',
+          from_name: 'Silverback Treeworks Website',
+          name, phone, email, service, address,
+          message: 'Customer chose to text their video directly to 604.312.7399.'
+        })
+      }).catch(() => {});
+
+      const smsBody = [
+        `Hi, this is ${name} (${phone}).`,
+        service ? `Re: ${service}.` : '',
+        address ? `Address: ${address}.` : '',
+        'Video quote request — video attached.'
+      ].filter(Boolean).join(' ');
+
+      window.location.href = `sms:6043127399?body=${encodeURIComponent(smsBody)}`;
+    });
+
     // File upload label
     const fileInput = document.getElementById('fileInput');
     const fileNames = document.getElementById('fileNames');
@@ -230,6 +342,31 @@
       uploadZone.classList.remove('dragover');
       fileInput.files = e.dataTransfer.files;
       fileInput.dispatchEvent(new Event('change'));
+    });
+
+    // Desktop hand-off: on a mouse-driven device, lead with a QR code
+    // to the phone instead of the upload form (they'll need the phone anyway).
+    const isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const desktopHandoff = document.getElementById('desktopHandoff');
+    const uploadFormWrap = document.getElementById('uploadFormWrap');
+    const revealUploadForm = document.getElementById('revealUploadForm');
+
+    if (isDesktop) {
+      desktopHandoff.hidden = false;
+      uploadFormWrap.hidden = true;
+      new QRCode(document.getElementById('qrcode'), {
+        text: window.location.href,
+        width: 140,
+        height: 140,
+        colorDark: '#1e3d2a',
+        colorLight: '#ffffff'
+      });
+    }
+
+    revealUploadForm?.addEventListener('click', e => {
+      e.preventDefault();
+      uploadFormWrap.hidden = false;
+      uploadFormWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   </script>
 </body>
