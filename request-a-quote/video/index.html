@@ -114,18 +114,8 @@
           <div id="uploadFormWrap">
             <span class="section-label upload-form-wrap__label">Or Upload It Here Instead</span>
 
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              enctype="multipart/form-data"
-              id="videoQuoteForm"
-            >
-              <!-- Web3Forms config -->
-              <input type="hidden" name="access_key" value="da4a7bcd-d62e-4182-a059-53c7499c898d">
-              <input type="hidden" name="subject" value="New Video Quote Request — Silverback Treeworks">
-              <input type="hidden" name="from_name" value="Silverback Treeworks Website">
-              <input type="hidden" name="redirect" value="https://teagenschmalhaus.github.io/silverback-treeworks/thanks/">
-              <input type="checkbox" name="botcheck" style="display:none">
+            <form id="videoQuoteForm">
+              <input type="checkbox" name="botcheck" id="botcheck" style="display:none">
 
               <div class="form-row">
                 <div class="form-group">
@@ -187,9 +177,10 @@
                 <textarea id="message" name="message" placeholder="Access concerns, timeline, or details the video doesn't cover"></textarea>
               </div>
 
-              <button type="submit" class="btn btn--accent btn--lg" style="width:100%;justify-content:center;">
+              <button type="submit" class="btn btn--accent btn--lg" id="videoSubmitBtn" style="width:100%;justify-content:center;">
                 Send My Video
               </button>
+              <p class="upload-zone__status" id="uploadStatus"></p>
             </form>
           </div>
 
@@ -341,6 +332,91 @@
       uploadZone.classList.remove('dragover');
       fileInput.files = e.dataTransfer.files;
       fileInput.dispatchEvent(new Event('change'));
+    });
+
+    // Upload form: send the video straight to Cloudinary (bypassing Web3Forms'
+    // 5MB attachment cap), then email the lead + video link through Web3Forms.
+    const CLOUDINARY_CLOUD_NAME = 'coulxko5';
+    const CLOUDINARY_UPLOAD_PRESET = 'Video Quote';
+
+    const videoQuoteForm = document.getElementById('videoQuoteForm');
+    const videoSubmitBtn = document.getElementById('videoSubmitBtn');
+    const uploadStatus = document.getElementById('uploadStatus');
+
+    videoQuoteForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (document.getElementById('botcheck').checked) return;
+
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      videoSubmitBtn.disabled = true;
+      videoSubmitBtn.textContent = 'Uploading video…';
+      uploadStatus.textContent = '';
+      uploadStatus.classList.remove('upload-zone__status--error');
+
+      const cloudinaryData = new FormData();
+      cloudinaryData.append('file', file);
+      cloudinaryData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/video/upload`);
+
+      xhr.upload.addEventListener('progress', evt => {
+        if (evt.lengthComputable) {
+          const pct = Math.round((evt.loaded / evt.total) * 100);
+          uploadStatus.textContent = `Uploading video… ${pct}%`;
+        }
+      });
+
+      xhr.onload = () => {
+        if (xhr.status < 200 || xhr.status >= 300) {
+          videoSubmitBtn.disabled = false;
+          videoSubmitBtn.textContent = 'Send My Video';
+          uploadStatus.textContent = 'Upload failed — please try again, or text your video to 604.312.7399 instead.';
+          uploadStatus.classList.add('upload-zone__status--error');
+          return;
+        }
+
+        const videoUrl = JSON.parse(xhr.responseText).secure_url;
+        uploadStatus.textContent = 'Sending your quote…';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key: 'da4a7bcd-d62e-4182-a059-53c7499c898d',
+            subject: 'New Video Quote Request — Silverback Treeworks',
+            from_name: 'Silverback Treeworks Website',
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            service: document.getElementById('service').value,
+            address: document.getElementById('address').value,
+            message: document.getElementById('message').value,
+            video_url: videoUrl
+          })
+        })
+          .then(() => {
+            window.location.href = 'https://teagenschmalhaus.github.io/silverback-treeworks/thanks/';
+          })
+          .catch(() => {
+            videoSubmitBtn.disabled = false;
+            videoSubmitBtn.textContent = 'Send My Video';
+            uploadStatus.textContent = "Your video uploaded, but we couldn't send the form — please call or text us at 604.312.7399.";
+            uploadStatus.classList.add('upload-zone__status--error');
+          });
+      };
+
+      xhr.onerror = () => {
+        videoSubmitBtn.disabled = false;
+        videoSubmitBtn.textContent = 'Send My Video';
+        uploadStatus.textContent = 'Upload failed — please check your connection and try again.';
+        uploadStatus.classList.add('upload-zone__status--error');
+      };
+
+      xhr.send(cloudinaryData);
     });
 
     // Desktop hand-off: on a mouse-driven device, lead with a QR code
