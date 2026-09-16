@@ -1305,6 +1305,14 @@ select {
 .send-video-panel__label { color: var(--gold); }
 .send-video-panel__title { color: var(--white); margin-top: 0.4rem; margin-bottom: 1.25rem; }
 .send-video-panel label { color: rgba(255,255,255,0.9); }
+.send-video-panel .upload-zone { border-color: rgba(255,255,255,0.35); }
+.send-video-panel .upload-zone:hover,
+.send-video-panel .upload-zone.dragover { border-color: var(--gold); background: rgba(255,255,255,0.06); }
+.send-video-panel .upload-zone__text { color: rgba(255,255,255,0.75); }
+.send-video-panel .upload-zone__text strong { color: var(--gold); }
+.send-video-panel .upload-zone__files { color: var(--gold); }
+.send-video-panel .upload-zone__status { color: rgba(255,255,255,0.75); }
+.send-video-panel .upload-zone__status--error { color: #ff8a80; }
 .send-video-panel__layout { display: flex; flex-direction: column; gap: 1.5rem; }
 .send-video-panel__main { min-width: 0; }
 
@@ -1393,13 +1401,3 @@ select {
   border-radius: var(--radius);
   margin-bottom: 1rem;
 }
-.desktop-handoff__reveal {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--green);
-  margin-top: 1rem;
-}
-.desktop-handoff__reveal:hover { text-decoration: underline; }
-
-.upload-form-wrap__label { margin-bottom: 1rem; }
