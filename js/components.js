@@ -1,4 +1,6 @@
 const ROOT = document.body.dataset.root ?? '';
+// Reuse this script's ?v= so the shared header busts the cache on each deploy too
+const VERSION = new URL(document.currentScript.src).searchParams.get('v');
 
 function rewriteRelativeLinks(container) {
   container.querySelectorAll('a[href]').forEach(a => {
@@ -17,7 +19,7 @@ async function loadComponent(id, file) {
   const el = document.getElementById(id);
   if (!el) return;
   try {
-    const res = await fetch(`${ROOT}${file}`);
+    const res = await fetch(`${ROOT}${file}${VERSION ? `?v=${VERSION}` : ''}`);
     if (!res.ok) return;
     const html = await res.text();
     const wrapper = document.createElement('div');

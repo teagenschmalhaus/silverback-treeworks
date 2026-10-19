@@ -332,10 +332,39 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 .nav__mobile-cta { margin-top: 1.75rem; display: block; width: 100%; text-align: center; }
 
+/* Phone + quote + burger, grouped on the right */
+.nav__actions { display: flex; align-items: center; gap: 0.75rem; }
+.nav__phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: var(--ease);
+}
+.nav__phone svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; transition: var(--ease); }
+.nav__phone:hover { background: var(--white); border-color: var(--white); color: var(--green-dark); }
+.nav__phone:hover svg { color: var(--green-dark); }
+.nav__phone-num { display: none; }
+
 @media (min-width: 1024px) {
   .nav__links { display: flex; }
   .nav__cta   { display: inline-flex; }
   .nav__burger{ display: none; }
+  .nav__actions { gap: 1.1rem; }
+}
+@media (min-width: 1200px) {
+  .nav__phone { width: auto; height: auto; padding: 0.875rem 1.4rem; }
+  .nav__phone-num { display: inline; }
 }
 
 /* ============================================
@@ -407,9 +436,6 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 .hero__actions { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 1rem; }
 
-.hero__phone { margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.65); }
-.hero__phone a { color: var(--gold); font-weight: 600; }
-.hero__phone a:hover { text-decoration: underline; }
 
 /* Certification badges: one dark card, bottom-right of the hero */
 .hero__badges {
