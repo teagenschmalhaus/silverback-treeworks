@@ -378,6 +378,9 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   height: auto;
   filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,0.45));
 }
+@media (max-width: 767px) {
+  .hero__logo-img { width: clamp(184px, 35.65vw, 391px); }
+}
 .hero__values {
   display: flex;
   flex-wrap: nowrap;
