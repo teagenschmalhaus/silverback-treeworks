@@ -410,7 +410,8 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   top: 1rem;
   right: var(--pad);
   z-index: 3;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
   gap: 0.6rem;
 }
 .hero__badge {
@@ -422,13 +423,15 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   object-fit: contain;
   box-shadow: 0 4px 16px rgba(0,0,0,0.35);
 }
+.hero__badge--wide { grid-column: 1 / -1; width: 100%; height: auto; }
 
 @media (min-width: 900px) {
   .hero__video-wrap { height: 90vh; max-height: 900px; }
   .hero__text { padding: 3.5rem var(--pad) 4.5rem; }
   .hero__values { font-size: 0.85rem; letter-spacing: 0.06em; gap: 0.6rem; }
-  .hero__badges { top: auto; bottom: 4.5rem; gap: 1rem; }
+  .hero__badges { top: auto; bottom: 4.5rem; gap: 1rem; grid-template-columns: repeat(2, 104px); }
   .hero__badge { width: 104px; height: 104px; padding: 6px; border-radius: 14px; }
+  .hero__badge--wide { width: 100%; height: auto; }
 }
 
 /* ============================================
