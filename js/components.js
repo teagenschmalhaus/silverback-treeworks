@@ -50,6 +50,14 @@ function initNav() {
     nav.classList.add('nav--solid');
   }
 
+  // Home: hide the nav logo while the big hero logo is on screen
+  const heroLogo = document.querySelector('.hero__logo-img');
+  if (heroLogo && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      nav.classList.toggle('nav--logo-hidden', entry.isIntersecting);
+    }, { rootMargin: `-${nav.offsetHeight}px 0px 0px 0px` }).observe(heroLogo);
+  }
+
   // Scroll: make nav solid after 60px
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
