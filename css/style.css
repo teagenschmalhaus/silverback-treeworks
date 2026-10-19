@@ -404,34 +404,39 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__phone a { color: var(--gold); font-weight: 600; }
 .hero__phone a:hover { text-decoration: underline; }
 
-/* Certification badges: top-right on mobile, bottom-right on desktop */
+/* Certification badges: one dark card, bottom-right of the hero */
 .hero__badges {
   position: absolute;
-  top: 1rem;
   right: var(--pad);
+  bottom: 1.25rem;
   z-index: 3;
   display: grid;
-  grid-template-columns: repeat(2, 60px);
-  gap: 0.6rem;
-}
-.hero__badge {
-  width: 60px;
-  height: 60px;
-  padding: 4px;
-  background: var(--white);
+  grid-template-columns: repeat(2, 43px);
+  gap: 5px;
+  padding: 7px;
+  background: rgba(78, 92, 84, 0.4);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 10px;
-  object-fit: contain;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  -webkit-backdrop-filter: blur(2px) saturate(0.7);
+  backdrop-filter: blur(2px) saturate(0.7);
 }
-.hero__badge--wide { grid-column: 1 / -1; width: 100%; height: auto; }
+.hero__badge { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; }
+.hero__badge--wide { grid-column: 1 / -1; aspect-ratio: auto; height: auto; border-radius: 3px; }
+
+/* Narrow phones: lift the hero text so the card sits below it */
+@media (max-width: 599px) {
+  .hero__text { padding-bottom: 7.25rem; }
+}
+@media (min-width: 600px) {
+  .hero__badges { bottom: 3rem; }
+}
 
 @media (min-width: 900px) {
   .hero__video-wrap { height: 90vh; max-height: 900px; }
   .hero__text { padding: 3.5rem var(--pad) 4.5rem; }
   .hero__values { font-size: 0.85rem; letter-spacing: 0.06em; gap: 0.6rem; }
-  .hero__badges { top: auto; bottom: 4.5rem; gap: 1rem; grid-template-columns: repeat(2, 104px); }
-  .hero__badge { width: 104px; height: 104px; padding: 6px; border-radius: 14px; }
-  .hero__badge--wide { width: 100%; height: auto; }
+  .hero__badges { bottom: 4.5rem; grid-template-columns: repeat(2, 82px); gap: 8px; padding: 10px; border-radius: 14px; }
 }
 
 /* ============================================
