@@ -333,20 +333,21 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .nav__mobile-cta { margin-top: 1.75rem; display: block; width: 100%; text-align: center; }
 
 /* Phone + quote + burger, grouped on the right */
-.nav__actions { display: flex; align-items: center; gap: 0.75rem; }
+.nav__logo { flex-shrink: 0; }
+.nav__actions { display: flex; align-items: center; gap: 0.5rem; }
 .nav__phone {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  width: 42px;
   height: 42px;
+  padding: 0 0.75rem;
   border: 2px solid rgba(255,255,255,0.45);
   border-radius: 999px;
   color: var(--white);
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
   transition: var(--ease);
@@ -354,7 +355,11 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .nav__phone svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; transition: var(--ease); }
 .nav__phone:hover { background: var(--white); border-color: var(--white); color: var(--green-dark); }
 .nav__phone:hover svg { color: var(--green-dark); }
-.nav__phone-num { display: none; }
+/* Icon-only where the number won't fit: very narrow phones, and laptops where the menu is wide */
+@media (max-width: 374px), (min-width: 1024px) and (max-width: 1199px) {
+  .nav__phone { width: 42px; padding: 0; }
+  .nav__phone-num { display: none; }
+}
 
 @media (min-width: 1024px) {
   .nav__links { display: flex; }
@@ -363,8 +368,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   .nav__actions { gap: 1.1rem; }
 }
 @media (min-width: 1200px) {
-  .nav__phone { width: auto; height: auto; padding: 0.875rem 1.4rem; }
-  .nav__phone-num { display: inline; }
+  .nav__phone { height: auto; padding: 0.875rem 1.4rem; font-size: 0.9rem; }
 }
 
 /* ============================================
