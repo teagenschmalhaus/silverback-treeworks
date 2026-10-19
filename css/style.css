@@ -404,10 +404,31 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__phone a { color: var(--gold); font-weight: 600; }
 .hero__phone a:hover { text-decoration: underline; }
 
+/* Certification badges: top-right on mobile, bottom-right on desktop */
+.hero__badges {
+  position: absolute;
+  top: 1rem;
+  right: var(--pad);
+  z-index: 3;
+  display: flex;
+  gap: 0.6rem;
+}
+.hero__badge {
+  width: 60px;
+  height: 60px;
+  padding: 4px;
+  background: var(--white);
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
 @media (min-width: 900px) {
   .hero__video-wrap { height: 90vh; max-height: 900px; }
   .hero__text { padding: 3.5rem var(--pad) 4.5rem; }
   .hero__values { font-size: 0.85rem; letter-spacing: 0.06em; gap: 0.6rem; }
+  .hero__badges { top: auto; bottom: 4.5rem; gap: 1rem; }
+  .hero__badge { width: 104px; height: 104px; padding: 6px; border-radius: 14px; }
 }
 
 /* ============================================
@@ -1134,23 +1155,6 @@ select {
 .footer__contact p { font-size: 0.875rem; color: rgba(255,255,255,0.65); margin-bottom: 0.4rem; }
 .footer__contact a { color: rgba(255,255,255,0.65); transition: var(--ease); }
 .footer__contact a:hover { color: var(--gold); }
-
-.footer__badges {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.75rem 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-.footer__badge-img {
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-  background: var(--white);
-  padding: 4px;
-  object-fit: contain;
-}
 
 .footer__bottom {
   padding-top: 1.5rem;
