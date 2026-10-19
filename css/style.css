@@ -374,7 +374,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__title--logo { margin-bottom: 1.5rem; line-height: 0; }
 .hero__logo-img {
   display: block;
-  width: clamp(160px, 31vw, 340px);
+  width: clamp(160px, 28.83vw, 316px);
   height: auto;
   filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,0.45));
 }
